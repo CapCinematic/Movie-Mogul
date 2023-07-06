@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './MovieContainer.css';
 
 function MovieContainer({ movies }) {
   const [selectedMovie, setSelectedMovie] = useState(null);
