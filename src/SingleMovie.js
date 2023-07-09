@@ -1,9 +1,14 @@
 import React from 'react';
 import './SingleMovie.css';
+import propTypes from 'prop-types'
 
-function SingleMovie({ movie }) {
+
+function SingleMovie({ movie, returnHome }) {
   return (
     <div className="single-movie">
+      <button className='home-button' onClick={
+         returnHome
+      }>Home</button>
       <div className="poster-container">
         <img src={movie.poster_path} alt={movie.title} />
       </div>
@@ -17,6 +22,11 @@ function SingleMovie({ movie }) {
       </div>
     </div>
   );
+}
+
+SingleMovie.prototypes = {
+  movie: propTypes.object.isRequired,
+  returnHome: propTypes.func.isRequired
 }
 
 export default SingleMovie;

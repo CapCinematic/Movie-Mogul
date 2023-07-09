@@ -12,6 +12,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [error, setError] = useState(null);
+  
 
   useEffect(() => {
     fetchMovies();
@@ -23,20 +24,24 @@ function App() {
       setMovies(data.movies);
     })
     .catch((error) => {
-      setError(error.message)
+      setError(error.message || ('Failed to fetch movies'))
     })
   }
 
-  const handleMovieClick = (movie) => {
+  const HandleMovieClick = (movie) => {
     setSelectedMovie(movie);
   };
+  
+  const HandleReturnHome = () => {
+    setSelectedMovie(null)
+  }
 
   return (
     <div>
       {selectedMovie ? (
-        <SingleMovie movie={selectedMovie} />
+        <SingleMovie movie={selectedMovie} returnHome={HandleReturnHome} />
       ) : (
-        <MovieContainer movies={movies} onMovieClick={handleMovieClick} />
+        <MovieContainer movies={movies} onMovieClick={HandleMovieClick} />
       )}
     </div>
   );
