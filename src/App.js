@@ -5,6 +5,7 @@ import MovieContainer from './MovieContainer';
 import './MovieContainer.css';
 import SingleMovie from './SingleMovie';
 import './SingleMovie.css';
+import acquireMovieInfo from './APIcalls';
 
 
 function App() {
