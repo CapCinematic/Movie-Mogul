@@ -1,9 +1,14 @@
 import React from 'react';
 import './SingleMovie.css';
 
-function SingleMovie({ movie }) {
+
+
+function SingleMovie({ movie, ReturnHome }) {
   return (
     <div className="single-movie">
+      <button className='home-button' onClick={
+         ReturnHome
+      }>Home</button>
       <div className="poster-container">
         <img src={movie.poster_path} alt={movie.title} />
       </div>
