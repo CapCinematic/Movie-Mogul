@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types'
 
 const MovieContainer = ({ movies, onMovieClick }) => {
   return (
@@ -18,6 +19,11 @@ const MovieContainer = ({ movies, onMovieClick }) => {
     </div>
   );
 };
+
+MovieContainer.propTypes = {
+  movies: propTypes.array.isRequired,
+  onMovieClick: propTypes.func.isRequired,
+}
 
 export default MovieContainer;
 
