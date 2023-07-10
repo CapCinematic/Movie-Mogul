@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './SingleMovie.css';
 import PropTypes from 'prop-types';
 import acquireMovieInfo from './APIcalls';
+import ErrorComponent from './Error';
+import { useParams, useNavigate } from 'react-router-dom';
 
-function SingleMovie({ movieId, returnHome }) {
+function SingleMovie({ returnHome }) {
+  const {id} = useParams();
+  const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
 
@@ -12,17 +16,18 @@ function SingleMovie({ movieId, returnHome }) {
   }, []);
 
   const fetchMovie = () => {
-    acquireMovieInfo(`movies/${movieId}`)
+    acquireMovieInfo(`movies/${id}`)
       .then((data) => {
         setMovie(data.movie);
       })
       .catch((error) => {
+        navigate('/error')
         setError(error.message || 'Failed to fetch movie');
       });
   };
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <ErrorComponent message={error}/>
   }
 
   if (!movie) {
@@ -50,7 +55,7 @@ function SingleMovie({ movieId, returnHome }) {
 }
 
 SingleMovie.propTypes = {
-  movieId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   returnHome: PropTypes.func.isRequired,
 };
 

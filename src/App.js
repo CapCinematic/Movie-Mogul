@@ -6,6 +6,8 @@ import './MovieContainer.css';
 import SingleMovie from './SingleMovie';
 import './SingleMovie.css';
 import acquireMovieInfo from './APIcalls';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import ErrorComponent from './Error';
 
 
 function App() {
@@ -38,11 +40,11 @@ function App() {
 
   return (
     <div>
-      {selectedMovie ? (
-        <SingleMovie movieId={selectedMovie.id} returnHome={HandleReturnHome} />
-      ) : (
-        <MovieContainer movies={movies} onMovieClick={HandleMovieClick} />
-      )}
+      <Routes>
+        <Route path="/" element={<MovieContainer movies={movies} onMovieClick={HandleMovieClick} />} />
+        <Route path="/:movieId" element={<SingleMovie returnHome={HandleReturnHome}/>}/>
+        <Route path="/error" element={<ErrorComponent message={'Network response error has occured'}/>}/>
+      </Routes>
     </div>
   );
 }
