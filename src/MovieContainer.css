@@ -1,32 +1,35 @@
-/* src/components/MovieContainer.css */
+.movie-container {
+  height: 750px; 
+  overflow: auto;
+  margin-top: 10em;
+}
 
 .movie-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .movie-item {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .movie-item img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-  
-  .movie-item h2 {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  
-  .movie-item p {
-    margin-bottom: 5px;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.movie-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.movie-item img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.movie-item h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.movie-item p {
+  margin-bottom: 5px;
+}
