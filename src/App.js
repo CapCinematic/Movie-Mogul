@@ -39,7 +39,7 @@ function App() {
   return (
     <div>
       {selectedMovie ? (
-        <SingleMovie movie={selectedMovie} returnHome={HandleReturnHome} />
+        <SingleMovie movieId={selectedMovie.id} returnHome={HandleReturnHome} />
       ) : (
         <MovieContainer movies={movies} onMovieClick={HandleMovieClick} />
       )}

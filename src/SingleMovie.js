@@ -1,14 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './SingleMovie.css';
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import acquireMovieInfo from './APIcalls';
 
+function SingleMovie({ movieId, returnHome }) {
+  const [movie, setMovie] = useState(null);
+  const [error, setError] = useState(null);
 
-function SingleMovie({ movie, returnHome }) {
+  useEffect(() => {
+    fetchMovie();
+  }, []);
+
+  const fetchMovie = () => {
+    acquireMovieInfo(`movies/${movieId}`)
+      .then((data) => {
+        setMovie(data.movie);
+      })
+      .catch((error) => {
+        setError(error.message || 'Failed to fetch movie');
+      });
+  };
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (!movie) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="single-movie">
-      <button className='home-button' onClick={
-         returnHome
-      }>Home</button>
+      <button className="home-button" onClick={returnHome}>
+        Home
+      </button>
       <div className="poster-container">
         <img src={movie.poster_path} alt={movie.title} />
       </div>
@@ -24,9 +49,9 @@ function SingleMovie({ movie, returnHome }) {
   );
 }
 
-SingleMovie.prototypes = {
-  movie: propTypes.object.isRequired,
-  returnHome: propTypes.func.isRequired
-}
+SingleMovie.propTypes = {
+  movieId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  returnHome: PropTypes.func.isRequired,
+};
 
 export default SingleMovie;
