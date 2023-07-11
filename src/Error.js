@@ -5,3 +5,4 @@ function ErrorComponent() {
   }
 
 export default ErrorComponent;
+

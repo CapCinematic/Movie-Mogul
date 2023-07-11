@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
+
 
 function MovieContainer({ movies }) {
   return (
@@ -9,12 +11,14 @@ function MovieContainer({ movies }) {
         {movies.map((movie) => (
           <div key={movie.id} className="movie-item">
            <NavLink to={`/movies/${movie.id}`} key={movie.id} className="movie-item">
+
             <img src={movie.poster_path} alt={movie.title} />
             <h2>{movie.title}</h2>
             <p>Average Rating: {movie.average_rating}</p>
             <p>Release Date: {movie.release_date}</p>
           </NavLink>
           </div>
+          </Link>
         ))}
       </div>
     </div>

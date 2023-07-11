@@ -5,10 +5,8 @@ import propTypes from 'prop-types'
 import acquireMovieInfo from './APIcalls';
 import ErrorComponent from './Error';
 
-
 function SingleMovie() {
   const { id } = useParams();
-
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
 
@@ -22,12 +20,14 @@ function SingleMovie() {
         setMovie(data.movie);
       })
       .catch((error) => {
+        navigate('/error')
         setError(error.message || 'Failed to fetch movie');
       });
   };
 
   if (error) {
     return <ErrorComponent />;
+
   }
 
   if (!movie) {
@@ -56,5 +56,6 @@ SingleMovie.prototypes = {
   movie: propTypes.object.isRequired,
   returnHome: propTypes.func.isRequired
 }
+
 
 export default SingleMovie;

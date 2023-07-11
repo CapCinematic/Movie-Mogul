@@ -6,6 +6,8 @@ import './MovieContainer.css';
 import SingleMovie from './SingleMovie';
 import './SingleMovie.css';
 import acquireMovieInfo from './APIcalls';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import ErrorComponent from './Error';
 
 function App() {
   const [movies, setMovies] = useState([]);
