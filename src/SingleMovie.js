@@ -4,6 +4,7 @@ import { useParams, NavLink } from 'react-router-dom';
 import propTypes from 'prop-types'
 import acquireMovieInfo from './APIcalls';
 import ErrorComponent from './Error';
+import { SingleMoviePropTypes, SingleMovieTypes } from './Utilites';
 
 function SingleMovie() {
   const { id } = useParams();
@@ -20,7 +21,7 @@ function SingleMovie() {
         setMovie(data.movie);
       })
       .catch((error) => {
-        navigate('/error')
+        // navigate('/error')
         setError(error.message || 'Failed to fetch movie');
       });
   };
@@ -52,10 +53,9 @@ function SingleMovie() {
   );
 }
 
-SingleMovie.prototypes = {
-  movie: propTypes.object.isRequired,
-  returnHome: propTypes.func.isRequired
-}
+// SingleMovie.propTypes = {
+//   SingleMovieTypes
+// }
 
 
 export default SingleMovie;
