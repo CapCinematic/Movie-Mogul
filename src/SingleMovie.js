@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import './SingleMovie.css';
-import PropTypes from 'prop-types';
+import { useParams, NavLink } from 'react-router-dom';
+import propTypes from 'prop-types'
 import acquireMovieInfo from './APIcalls';
 import ErrorComponent from './Error';
-import { useParams, useNavigate } from 'react-router-dom';
 
-function SingleMovie({ returnHome }) {
-  const {id} = useParams();
-  const navigate = useNavigate();
+function SingleMovie() {
+  const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchMovie();
-  }, []);
+  }, [id]);
 
   const fetchMovie = () => {
     acquireMovieInfo(`movies/${id}`)
@@ -27,7 +26,8 @@ function SingleMovie({ returnHome }) {
   };
 
   if (error) {
-    return <ErrorComponent message={error}/>
+    return <ErrorComponent />;
+
   }
 
   if (!movie) {
@@ -36,9 +36,7 @@ function SingleMovie({ returnHome }) {
 
   return (
     <div className="single-movie">
-      <button className="home-button" onClick={returnHome}>
-        Home
-      </button>
+      <NavLink to="/">Back to Home</NavLink>
       <div className="poster-container">
         <img src={movie.poster_path} alt={movie.title} />
       </div>
@@ -54,9 +52,10 @@ function SingleMovie({ returnHome }) {
   );
 }
 
-SingleMovie.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  returnHome: PropTypes.func.isRequired,
-};
+SingleMovie.prototypes = {
+  movie: propTypes.object.isRequired,
+  returnHome: propTypes.func.isRequired
+}
+
 
 export default SingleMovie;

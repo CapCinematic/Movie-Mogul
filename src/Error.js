@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
 
-function ErrorComponent({ message }){
-  return <div> Error: {message} </div>
-}
+function ErrorComponent() {
+    return <div>Error: Failed to fetch movies</div>;
+  }
 
-export default ErrorComponent
+export default ErrorComponent;
+

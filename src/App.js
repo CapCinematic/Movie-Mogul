@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
 import './App.css';
-import mockData from './mockData';
 import MovieContainer from './MovieContainer';
 import './MovieContainer.css';
 import SingleMovie from './SingleMovie';
@@ -9,12 +9,9 @@ import acquireMovieInfo from './APIcalls';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import ErrorComponent from './Error';
 
-
 function App() {
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
   const [error, setError] = useState(null);
-  
 
   useEffect(() => {
     fetchMovies();
@@ -22,30 +19,36 @@ function App() {
 
   const fetchMovies = () => {
     acquireMovieInfo('movies')
-    .then((data) => {
-      setMovies(data.movies);
-    })
-    .catch((error) => {
-      setError(error.message || ('Failed to fetch movies'))
-    })
-  }
-
-  const HandleMovieClick = (movie) => {
-    setSelectedMovie(movie);
+      .then((data) => {
+        setMovies(data.movies);
+      })
+      .catch((error) => {
+        setError(error.message || 'Failed to fetch movies');
+      });
   };
-  
-  const HandleReturnHome = () => {
-    setSelectedMovie(null)
-  }
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<MovieContainer movies={movies} onMovieClick={HandleMovieClick} />} />
-        <Route path="/:movieId" element={<SingleMovie returnHome={HandleReturnHome}/>}/>
-        <Route path="/error" element={<ErrorComponent message={'Network response error has occured'}/>}/>
-      </Routes>
-    </div>
+    <BrowserRouter>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              {/* <NavLink to="/">Home</NavLink> */}
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route
+            path="/"
+            element={<MovieContainer movies={movies} />}
+          />
+          <Route
+            path="/movies/:id"
+            element={<SingleMovie />}
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
