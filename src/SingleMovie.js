@@ -6,10 +6,11 @@ import acquireMovieInfo from './APIcalls';
 import ErrorComponent from './Error';
 import { SingleMoviePropTypes, SingleMovieTypes } from './Utilites';
 
+console.log(SingleMovieTypes)
 function SingleMovie() {
   const { id } = useParams();
-  const [movie, setMovie] = useState(null);
-  const [error, setError] = useState(null);
+  const [movie, setMovie] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     fetchMovie();
@@ -53,9 +54,9 @@ function SingleMovie() {
   );
 }
 
-// SingleMovie.propTypes = {
-//   SingleMovieTypes
-// }
+SingleMovie.propTypes = 
+  SingleMovieTypes.id
+
 
 
 export default SingleMovie;

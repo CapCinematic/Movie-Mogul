@@ -10,7 +10,7 @@ import ErrorComponent from './Error';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     fetchMovies();
