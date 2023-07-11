@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './SingleMovie.css';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import propTypes from 'prop-types'
 import acquireMovieInfo from './APIcalls';
 import ErrorComponent from './Error';
@@ -36,7 +36,7 @@ function SingleMovie() {
 
   return (
     <div className="single-movie">
-      <Link to="/">Back to Home</Link>
+      <NavLink to="/">Back to Home</NavLink>
       <div className="poster-container">
         <img src={movie.poster_path} alt={movie.title} />
       </div>

@@ -22,7 +22,6 @@ function MovieContainer({ movies }) {
 }
 MovieContainer.propTypes = {
   movies: propTypes.array.isRequired,
-  onMovieClick: propTypes.func.isRequired,
 }
 
 export default MovieContainer;

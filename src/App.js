@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
 import './App.css';
 import MovieContainer from './MovieContainer';
 import './MovieContainer.css';
@@ -31,7 +31,7 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              {/* <NavLink to="/">Home</NavLink> */}
             </li>
           </ul>
         </nav>
