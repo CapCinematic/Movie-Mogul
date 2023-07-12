@@ -4,9 +4,8 @@ import { useParams, NavLink } from 'react-router-dom';
 import propTypes from 'prop-types'
 import acquireMovieInfo from './APIcalls';
 import ErrorComponent from './Error';
-import { SingleMoviePropTypes, SingleMovieTypes } from './Utilites';
+import { MovieTypes } from './Utilites';
 
-console.log(SingleMovieTypes)
 function SingleMovie() {
   const { id } = useParams();
   const [movie, setMovie] = useState('');
@@ -55,7 +54,7 @@ function SingleMovie() {
 }
 
 SingleMovie.propTypes = 
-  SingleMovieTypes.id
+  MovieTypes
 
 
 
