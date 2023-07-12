@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import propTypes from 'prop-types';
-import { MoviesPropTypes } from './Utilites';
+import PropTypes from 'prop-types';
+import { MovieContainerTypes} from './PropTypes';
 
 
 function MovieContainer({ movies }) {
@@ -11,7 +11,6 @@ function MovieContainer({ movies }) {
         {movies.map((movie) => (
           <div key={movie.id} className="movie-item">
            <NavLink to={`/movies/${movie.id}`} key={movie.id} className="movie-item">
-
             <img src={movie.poster_path} alt={movie.title} />
             <h2>{movie.title}</h2>
             <p>Average Rating: {movie.average_rating}</p>
@@ -23,8 +22,17 @@ function MovieContainer({ movies }) {
     </div>
   );
 }
+
 MovieContainer.propTypes = {
- MoviesPropTypes
+  movies: PropTypes.arrayOf(
+      PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      poster_path: PropTypes.string.isRequired,
+      average_rating: PropTypes.number.isRequired,
+      release_date: PropTypes.string.isRequired,
+    })
+  ).isRequired
 }
 
 export default MovieContainer;
