@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
 import './App.css';
 import MovieContainer from './MovieContainer';
 import './MovieContainer.css';
@@ -11,7 +10,7 @@ import ErrorComponent from './Error';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     fetchMovies();
@@ -28,7 +27,6 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
       <div>
         <nav>
           <ul>
@@ -48,7 +46,6 @@ function App() {
           />
         </Routes>
       </div>
-    </BrowserRouter>
   );
 }
 

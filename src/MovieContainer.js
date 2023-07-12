@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import propTypes from 'prop-types';
-import PropTypes from 'prop-types';
+import { MoviesPropTypes } from './Utilites';
 
 
 function MovieContainer({ movies }) {
@@ -18,14 +18,13 @@ function MovieContainer({ movies }) {
             <p>Release Date: {movie.release_date}</p>
           </NavLink>
           </div>
-          </Link>
         ))}
       </div>
     </div>
   );
 }
 MovieContainer.propTypes = {
-  movies: propTypes.array.isRequired,
+ MoviesPropTypes
 }
 
 export default MovieContainer;
