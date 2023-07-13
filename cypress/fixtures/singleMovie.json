@@ -2,7 +2,7 @@
   "movie": {
     "id": 694919,
     "title": "Money Plane",
-    "poster_path": "<https://image.tmdb.org/t/p/original/6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg>",
+    "poster_path": "https://image.tmdb.org/t/p/original/6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg",
     "average_rating": 5.0,
     "release_date": "2020-09-29",
     "runtime": 82,
