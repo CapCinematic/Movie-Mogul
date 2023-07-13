@@ -1,0 +1,12 @@
+{
+  "movie": {
+    "id": 694919,
+    "title": "Money Plane",
+    "poster_path": "<https://image.tmdb.org/t/p/original/6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg>",
+    "average_rating": 5.0,
+    "release_date": "2020-09-29",
+    "runtime": 82,
+    "genres": ["Action", "Crime"],
+    "overview": "A professional thief with $40 million in debt and his family's life on the line must commit one final heist - rob a futuristic airborne casino filled with the world's most dangerous criminals."
+  }
+}
