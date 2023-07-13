@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './SingleMovie.css';
 import { useParams, NavLink } from 'react-router-dom';
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import acquireMovieInfo from './APIcalls';
 import ErrorComponent from './Error';
-import { MovieTypes } from './Utilites';
+import { MovieTypes, SingleMovieTypes, SingleMoviePropTypes } from './PropTypes';
 
 function SingleMovie() {
   const { id } = useParams();
@@ -13,7 +13,7 @@ function SingleMovie() {
 
   useEffect(() => {
     fetchMovie();
-  }, [id]);
+  }, []);
 
   const fetchMovie = () => {
     acquireMovieInfo(`movies/${id}`)
@@ -52,9 +52,6 @@ function SingleMovie() {
     </div>
   );
 }
-
-SingleMovie.propTypes = 
-  MovieTypes
 
 
 
