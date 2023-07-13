@@ -55,3 +55,30 @@
   margin-bottom: 20px;
   box-shadow: 0px 15px 40px;
 }
+
+@media (max-width: 768px) {
+  .single-movie {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .poster-container {
+    justify-self: center;
+    max-width: 200px;
+  }
+
+  .info-container {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .single-movie {
+    grid-template-columns: 1fr;
+  }
+
+  .poster-container {
+    max-width: 150px;
+  }
+}
