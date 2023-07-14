@@ -5,7 +5,7 @@ import './MovieContainer.css';
 import SingleMovie from './SingleMovie';
 import './SingleMovie.css';
 import acquireMovieInfo from './APIcalls';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ErrorComponent from './Error';
 
 function App() {
@@ -26,26 +26,19 @@ function App() {
       });
   };
 
+  if (error) {
+    return <ErrorComponent />;
+  }
+
   return (
-      <div>
-        <nav>
-          <ul>
-            <li>
-              {/* <NavLink to="/">Home</NavLink> */}
-            </li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route
-            path="/"
-            element={<MovieContainer movies={movies} />}
-          />
-          <Route
-            path="/movies/:id"
-            element={<SingleMovie />}
-          />
-        </Routes>
-      </div>
+    <div>
+      <nav>
+      </nav>
+      <Routes>
+        <Route path="/" element={<MovieContainer movies={movies} />} />
+        <Route path="/movies/:id" element={<SingleMovie />} />
+      </Routes>
+    </div>
   );
 }
 
