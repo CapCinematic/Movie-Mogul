@@ -21,18 +21,16 @@ function SingleMovie() {
         setMovie(data.movie);
       })
       .catch((error) => {
-        // navigate('/error')
         setError(error.message || 'Failed to fetch movie');
       });
   };
 
   if (error) {
     return <ErrorComponent />;
-
   }
 
   if (!movie) {
-    return <div>Loading...</div>;
+    return <div>'Failed to fetch movie'</div>;
   }
 
   return (
@@ -52,7 +50,5 @@ function SingleMovie() {
     </div>
   );
 }
-
-
 
 export default SingleMovie;
