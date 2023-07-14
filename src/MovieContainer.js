@@ -10,6 +10,7 @@ function MovieContainer({ movies }) {
       <div className="movie-list">
         {movies.map((movie) => (
           <div key={movie.id} className="movie-item">
+
            <NavLink to={`/movies/${movie.id}`} key={movie.id}>
             <img src={movie.poster_path} alt={movie.title} />
             <h2>{movie.title}</h2>
