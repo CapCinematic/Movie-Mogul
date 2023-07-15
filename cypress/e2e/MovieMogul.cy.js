@@ -11,7 +11,7 @@ describe('Movie Mogul App', () => {
 
   it('displays a single movie on click', () => {
     cy.get('.movie-list').first().click()
-    cy.url().should('include', '/movies/337401')
+    cy.url().should('include', 'movies/337401')
     cy.get('.single-movie').should('exist')
   })
 
