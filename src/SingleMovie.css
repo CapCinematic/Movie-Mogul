@@ -36,7 +36,7 @@
 }
 
 .info-container p {
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .info-container {
-  width: 100%;
+  width: 97%;
 }
 
 .single-movie img {
@@ -54,6 +54,10 @@
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 0px 15px 40px;
+}
+.single-movie{
+  height: 37em;
+    width: 75em;
 }
 
 @media (max-width: 768px) {

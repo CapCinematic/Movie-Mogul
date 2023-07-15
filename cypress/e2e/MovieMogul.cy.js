@@ -10,10 +10,10 @@ describe('Movie Mogul App', () => {
   })
 
   it('displays a single movie on click', () => {
-    cy.get('.movie-list').first().click()
-    cy.url().should('include', '/movies/436270')
-    cy.get('.single-movie').should('exist')
-  })
+  cy.get('.movie-list .movie-item').eq(0).click() // Click on the first movie item
+  cy.url().should('include', '/movies/436270')
+  cy.get('.single-movie').should('exist')
+})
 
   it('returns to movie container display on click of Back To Home', () => {
     cy.get('.movie-list').find('.movie-item').first().click()

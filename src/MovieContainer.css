@@ -1,8 +1,9 @@
 .movie-container {
-  height: 750px; 
+  height: 31em;
   overflow: auto;
-  margin-top: 10em;
+  margin-top: 5em;
 }
+
 
 .movie-list {
   display: grid;
@@ -29,8 +30,10 @@
 .movie-item h2 {
   font-size: 20px;
   margin-bottom: 5px;
+  color: black;
 }
 
 .movie-item p {
   margin-bottom: 5px;
+  color: black;
 }

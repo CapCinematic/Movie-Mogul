@@ -7,6 +7,33 @@
   pointer-events: none;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8em;
+}
+
+.logo {
+  width: 40em;
+  height: auto; 
+  margin-right: 10px; 
+}
+
+.brand-logo {
+  width: 430px;
+  height: auto;
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.filter-noir {
+  filter: grayscale(100%);
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
