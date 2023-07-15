@@ -10,6 +10,17 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
   padding-right: 30px;
+  border: 1px solid black;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.movie-list::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.movie-list::-webkit-scrollbar-thumb {
+  background-color: #000000; /* Set the color of the scrollbar thumb */
 }
 
 .movie-item {

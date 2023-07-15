@@ -7,8 +7,8 @@ import './SingleMovie.css';
 import acquireMovieInfo from './APIcalls';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ErrorComponent from './Error';
-import blacklogo from './Assets/logo MM.png';
-import brandLogo from './Assets/brand MM.png';
+import blacklogo from './Assets/whitelogoMM.png';
+import brandLogo from './Assets/whitebrandMM.png';
 
 function App() {
   const [movies, setMovies] = useState([]);
