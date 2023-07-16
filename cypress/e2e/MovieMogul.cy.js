@@ -1,7 +1,7 @@
 describe('Movie Mogul App', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', { fixture: 'movies.json' })
-    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/436270', { fixture: 'singleMovie.json' })
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/337401', { fixture: 'singleMovie.json' })
     cy.visit('http://localhost:3000/')
   })
 
@@ -10,10 +10,10 @@ describe('Movie Mogul App', () => {
   })
 
   it('displays a single movie on click', () => {
-  cy.get('.movie-list .movie-item').eq(0).click() // Click on the first movie item
-  cy.url().should('include', '/movies/436270')
-  cy.get('.single-movie').should('exist')
-})
+    cy.get('.movie-list').first().click()
+    cy.url().should('include', 'movies/337401')
+    cy.get('.single-movie').should('exist')
+  })
 
   it('returns to movie container display on click of Back To Home', () => {
     cy.get('.movie-list').find('.movie-item').first().click()

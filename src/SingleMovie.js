@@ -34,7 +34,7 @@ function SingleMovie() {
   }
 
   if (!movie) {
-    return <div>'Failed to fetch movie'</div>;
+    return <div className='error-message'>'Failed to fetch movie 500 error'</div>;
   }
 
   return (

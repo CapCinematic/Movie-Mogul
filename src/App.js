@@ -30,7 +30,7 @@ function App() {
   };
 
   if (error) {
-    return <ErrorComponent />;
+    return <ErrorComponent message={error} />;
   }
 
   return (
@@ -49,7 +49,7 @@ function App() {
       </Routes>
       <img src={brandLogo} alt="Brand Logo" className="brand-logo" />
     </div>
-  );
+    );
 }
 
 export default App;
