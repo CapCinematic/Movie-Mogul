@@ -29,10 +29,6 @@
   transform: translateX(-50%);
 }
 
-.filter-noir {
-  filter: grayscale(100%);
-}
-
 .image-container {
   display: flex;
   justify-content: center;
@@ -46,33 +42,47 @@
   height: auto;
 }
 
+/* Phone */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  .logo {
+    width: 100%;
+  }
+
+  .brand-logo {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    margin-bottom: 10px;
+    transform: translateX(0);
+    position: static;
+  }
+
+  .image-container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .white-chain-image {
+    width: 100%;
+    height: auto;
+  }
+
+   /*Laptop/Desktop */
+
+  @media (min-width: 1025px) {
+    .logo-container {
+      height: 10em;
+    }
+  
+    .logo {
+      width: 20em;
+    }
+  }
+  .white-chain-image {
+    width: 50%;
+    height: auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
