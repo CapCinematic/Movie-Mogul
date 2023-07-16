@@ -21,8 +21,8 @@
 }
 
 .brand-logo {
-  width: 430px;
-  height: auto;
+  width: 480px;
+    height: 460px;
   position: fixed;
   bottom: -100px;
   left: 50%;
@@ -31,6 +31,19 @@
 
 .filter-noir {
   filter: grayscale(100%);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -195px;
+  margin-bottom: -265px;
+}
+
+
+.white-chain-image {
+  width: 395px;
+  height: auto;
 }
 
 
