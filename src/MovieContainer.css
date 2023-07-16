@@ -16,7 +16,7 @@
 }
 
 .movie-list::-webkit-scrollbar {
-  width: 8px; /* Adjust the width of the scrollbar */
+  width: 8px; 
 }
 
 .movie-list::-webkit-scrollbar-thumb {

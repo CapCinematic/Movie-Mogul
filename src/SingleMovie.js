@@ -55,9 +55,12 @@ function SingleMovie() {
         <p>Runtime: {movie.runtime} min</p>
         <p>Genres: {movie.genres}</p>
         <p>Overview: {movie.overview}</p>
+        
       </div>
       </div>
+      
     </div>
+    
   );
 }
 
