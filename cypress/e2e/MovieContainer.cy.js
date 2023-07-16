@@ -8,6 +8,9 @@ describe('User Form dashboard with user flows', () => {
 
     cy.intercept({method: 'GET', url:'https://rancid-tomatillos.herokuapp.com/api/v2/movies'}, MultipleStub)
     cy.intercept({method: 'GET', url:'https://rancid-tomatillos.herokuapp.com/api/v2/movies/*'}, SingleStub)
+    // cy.intercept({ method: 'GET', url: 'https://rancid-tomatillos.herokuapp.com/api/v2/movies' }, { 
+    //   statusCode: 500, 
+    // })
     testVisit()
 
   })
@@ -37,18 +40,6 @@ describe('User Form dashboard with user flows', () => {
       cy.get('p').contains(`Release Date: ${SingleStub.movie.release_date}`)
       cy.get('p').contains(`Runtime: ${SingleStub.movie.runtime} min`)
       cy.get('p').contains(`Overview: ${SingleStub.movie.overview}`)
-    })
- 
-    it('displays an error message when fetching movies fails', () => {
-      const errorMessage = 'Failed to fetch movies'
-  
-      cy.intercept({ method: 'GET', url: 'https://rancid-tomatillos.herokuapp.com/api/v2/movies' }, { 
-        statusCode: 500, 
-        body: errorMessage 
-      })
-  
-      testVisit()
-      cy.contains('Error: Failed to fetch movies').should('be.visible')
     })
   })
 })

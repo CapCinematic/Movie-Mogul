@@ -1,0 +1,12 @@
+{
+  "movie": {
+    "id": 1,
+    "title": "Missing Data",
+    "poster_path": "",
+    "average_rating": 5.0,
+    "release_date": "2020-01-01",
+    "runtime": 90,
+    "genres": [],
+    "overview": "A movie with missing data."
+  }
+}

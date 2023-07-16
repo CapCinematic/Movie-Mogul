@@ -1,7 +1,7 @@
 describe('Movie Mogul App', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', { fixture: 'movies.json' })
-    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/436270', { fixture: 'singleMovie.json' })
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/337401', { fixture: 'singleMovie.json' })
     cy.visit('http://localhost:3000/')
   })
 
@@ -11,7 +11,7 @@ describe('Movie Mogul App', () => {
 
   it('displays a single movie on click', () => {
     cy.get('.movie-list').first().click()
-    cy.url().should('include', '/movies/436270')
+    cy.url().should('include', 'movies/337401')
     cy.get('.single-movie').should('exist')
   })
 

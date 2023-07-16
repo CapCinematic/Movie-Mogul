@@ -27,19 +27,17 @@ function App() {
   };
 
   if (error) {
-    return <ErrorComponent />;
+    return <ErrorComponent message={error} />;
   }
 
   return (
     <div>
-      <nav>
-      </nav>
       <Routes>
         <Route path="/" element={<MovieContainer movies={movies} />} />
         <Route path="/movies/:id" element={<SingleMovie />} />
       </Routes>
     </div>
-  );
+    );
 }
 
 export default App;
