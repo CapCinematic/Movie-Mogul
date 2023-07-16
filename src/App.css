@@ -21,13 +21,18 @@
 }
 
 .brand-logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 480px;
-    height: 460px;
+  height: 460px;
   position: fixed;
-  bottom: -100px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -50px;
+  left: 40%;
+  /* transform: translateX(-50%); */
+  transition: transform .2s ease-in-out;
 }
+
+
 
 .filter-noir {
   filter: grayscale(100%);

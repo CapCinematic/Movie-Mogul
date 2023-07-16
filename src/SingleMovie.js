@@ -45,7 +45,6 @@ function SingleMovie() {
       </div>
     )}
     <div className="single-movie">
-      <NavLink to="/">Back to Home</NavLink>
       <div className="poster-container">
         <img src={movie.poster_path} alt={movie.title} />
       </div>
