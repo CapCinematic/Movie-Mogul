@@ -39,10 +39,11 @@ function SingleMovie() {
 
   return (
     <div className="single-movie">
-    
-    <div className="logo-container">
+    {showLogo && (
+      <div className="logo-container">
         <img src={blacklogo} alt="Logo" />
-    </div>
+      </div>
+    )}
     <div className="single-movie">
       <NavLink to="/">Back to Home</NavLink>
       <div className="poster-container">
