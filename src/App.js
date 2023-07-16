@@ -47,7 +47,9 @@ function App() {
         <Route path="/" element={<MovieContainer movies={movies} />} />
         <Route path="/movies/:id" element={<SingleMovie />} />
       </Routes>
-      <img src={brandLogo} alt="Brand Logo" className="brand-logo" />
+      <Link to="/" className="brand-logo-link">
+        <img src={brandLogo} alt="Brand Logo" className="brand-logo" />
+      </Link>
     </div>
     );
 }
