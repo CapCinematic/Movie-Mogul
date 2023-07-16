@@ -22,9 +22,9 @@ Steps to install the project and how to get the development environment running:
 
 ## Usage
 
-![MovieContainer](https://giphy.com/embed/DMHVQ6SvVbH5lYL4Yq)
+<image src=https://giphy.com/embed/DMHVQ6SvVbH5lYL4Yq>
 
-![SingleMovie](https://giphy.com/gifs/DMHVQ6SvVbH5lYL4Yq)
+<image src=https://giphy.com/gifs/DMHVQ6SvVbH5lYL4Yq>
 
 ## Contributing
 
