@@ -22,9 +22,9 @@ Steps to install the project and how to get the development environment running:
 
 ## Usage
 
-<image src=https://giphy.com/embed/DMHVQ6SvVbH5lYL4Yq>
+<image src=https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmVjaGdmMHczb3RyZG5namVvaGw5anpveDNhN2wwOWJrejdqNHg3ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DMHVQ6SvVbH5lYL4Yq/giphy.gif>
 
-<image src=https://giphy.com/gifs/DMHVQ6SvVbH5lYL4Yq>
+![SingleMovie](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmVjaGdmMHczb3RyZG5namVvaGw5anpveDNhN2wwOWJrejdqNHg3ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DMHVQ6SvVbH5lYL4Yq/giphy.gif)
 
 ## Contributing
 
