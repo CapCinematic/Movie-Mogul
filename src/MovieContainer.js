@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { MovieContainerTypes} from './PropTypes';
 
-
 function MovieContainer({ movies }) {
   return (
     <div className="movie-container">
