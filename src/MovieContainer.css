@@ -15,14 +15,6 @@
   overflow: auto;
 }
 
-.movie-list::-webkit-scrollbar {
-  width: 8px; 
-}
-
-.movie-list::-webkit-scrollbar-thumb {
-  background-color: #C3BFB6; /* Set the color of the scrollbar thumb */
-  border-radius: 8px;
-}
 
 .movie-item {
   background-color: #F1ECE2;

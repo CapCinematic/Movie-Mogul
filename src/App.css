@@ -23,10 +23,10 @@
 .brand-logo {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 480px;
-  height: 460px;
+  width: 380px;
+  height: 380px;
   position: fixed;
-  bottom: -50px;
+  bottom: -110px;
   left: 40%;
   /* transform: translateX(-50%); */
   transition: transform .2s ease-in-out;
@@ -35,7 +35,7 @@
 .image-container {
   display: flex;
   justify-content: center;
-  margin-top: -195px;
+  margin-top: -175px;
   margin-bottom: -265px;
 }
 
