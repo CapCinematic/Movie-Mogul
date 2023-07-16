@@ -129,7 +129,7 @@ p {
 /* Laptop/Desktop */
 @media (min-width: 1025px) {
   .single-movie {
-    height: 40em;
+    height: 33em;
     width: 120em;
   }
 }

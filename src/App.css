@@ -21,11 +21,10 @@
 }
 
 .brand-logo {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 480px;
   height: 460px;
-  position: fixed;
+  position:fixed;
   bottom: -50px;
   left: 40%;
   /* transform: translateX(-50%); */

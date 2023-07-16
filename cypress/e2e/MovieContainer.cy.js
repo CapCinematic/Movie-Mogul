@@ -8,9 +8,6 @@ describe('User Form dashboard with user flows', () => {
 
     cy.intercept({method: 'GET', url:'https://rancid-tomatillos.herokuapp.com/api/v2/movies'}, MultipleStub)
     cy.intercept({method: 'GET', url:'https://rancid-tomatillos.herokuapp.com/api/v2/movies/*'}, SingleStub)
-    // cy.intercept({ method: 'GET', url: 'https://rancid-tomatillos.herokuapp.com/api/v2/movies' }, { 
-    //   statusCode: 500, 
-    // })
     testVisit()
 
   })
@@ -33,7 +30,7 @@ describe('User Form dashboard with user flows', () => {
     
     cy.url().should('include', `/movies/${movieId}`)
 
-    cy.get('.single-movie').within(() => {
+    cy.get('.single-movie').first(() => {
       cy.get('h2').should('contain', SingleStub.movie.title)
       cy.get('img').should('have.attr', 'src', SingleStub.movie.poster_path)
       cy.get('p').contains(`Average Rating: ${SingleStub.movie.average_rating}`)

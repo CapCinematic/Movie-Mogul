@@ -12,13 +12,15 @@ describe('Movie Mogul App', () => {
   it('displays a single movie on click', () => {
     cy.get('.movie-list').first().click()
     cy.url().should('include', 'movies/337401')
+    cy.get('.logo-container').should('exist')
     cy.get('.single-movie').should('exist')
   })
 
-  it('returns to movie container display on click of Back To Home', () => {
+  it('returns to movie container display on click of the Brand Logo', () => {
     cy.get('.movie-list').find('.movie-item').first().click()
-    cy.get('.single-movie').should('exist')
-    cy.get('.single-movie').contains('Back to Home').click()
+    cy.get('.single-movie').should('exist',  {force: true})
+    cy.get('.logo-container').should('exist')
+    cy.get('.brand-logo').click()
     cy.url().should('be.equal', 'http://localhost:3000/')
     cy.get('.movie-list').should('exist')
   })
