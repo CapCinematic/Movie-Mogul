@@ -22,6 +22,16 @@ p {
   width: 120em;
   overflow: auto;
 }
+.brand-logo:hover {
+  /* height: 350px;
+  width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px; */
+  border-spacing: 1rem;
+  border-radius: 250px;
+  background-color: transparent;
+  transform: scale(1.6);
+}
 
 .poster-container {
   width: 40%;
@@ -48,7 +58,7 @@ p {
 }
 
 .info-container p {
-  font-size: 1.0em;
+  font-size: 24px;
   margin-bottom: 1rem;
 }
 
