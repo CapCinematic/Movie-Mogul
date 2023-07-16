@@ -95,5 +95,31 @@ p {
     padding: 1rem;
     text-align: center;
   }
+
+  /* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    padding-right: 20px;
+  }
+
+  .single-movie {
+    height: 30em;
+    width: 80em;
+  }
+
+  .info-container {
+    width: 85%;
+    padding: 1.5rem;
+  }
+}
+/* Laptop/Desktop */
+@media (min-width: 1025px) {
+  .single-movie {
+    height: 40em;
+    width: 120em;
+  }
+  }
 }
 
