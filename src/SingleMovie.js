@@ -54,11 +54,9 @@ function SingleMovie() {
         <p>Release Date: {movie.release_date}</p>
         <p>Runtime: {movie.runtime} min</p>
         <p>Genres: {movie.genres}</p>
-        <p>Overview: {movie.overview}</p>
-        
+        <p>Overview: {movie.overview}</p>  
       </div>
       </div>
-      
     </div>
     
   );
