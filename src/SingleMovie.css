@@ -23,11 +23,8 @@ p {
   overflow: auto;
   align-items: flex-start;
 }
+
 .brand-logo:hover {
-  /* height: 350px;
-  width: 350px;
-  margin-top: 20px;
-  margin-bottom: 20px; */
   border-spacing: 1rem;
   border-radius: 250px;
   background-color: transparent;
