@@ -5,14 +5,18 @@ import PropTypes from 'prop-types'
 import acquireMovieInfo from './APIcalls';
 import ErrorComponent from './Error';
 import { MovieTypes, SingleMovieTypes, SingleMoviePropTypes } from './PropTypes';
+import blacklogo from './Assets/whitelogoMM.png';
+
 
 function SingleMovie() {
   const { id } = useParams();
   const [movie, setMovie] = useState('');
   const [error, setError] = useState('');
+  const [showLogo, setShowLogo] = useState(true); 
 
   useEffect(() => {
     fetchMovie();
+    setShowLogo(false);
   }, []);
 
   const fetchMovie = () => {
@@ -35,6 +39,12 @@ function SingleMovie() {
 
   return (
     <div className="single-movie">
+    {showLogo && (
+      <div className="logo-container">
+        <img src={blacklogo} alt="Logo" />
+      </div>
+    )}
+    <div className="single-movie">
       <NavLink to="/">Back to Home</NavLink>
       <div className="poster-container">
         <img src={movie.poster_path} alt={movie.title} />
@@ -46,6 +56,7 @@ function SingleMovie() {
         <p>Runtime: {movie.runtime} min</p>
         <p>Genres: {movie.genres}</p>
         <p>Overview: {movie.overview}</p>
+      </div>
       </div>
     </div>
   );

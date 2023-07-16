@@ -7,6 +7,9 @@ import './SingleMovie.css';
 import acquireMovieInfo from './APIcalls';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ErrorComponent from './Error';
+import blacklogo from './Assets/whitelogoMM.png';
+import brandLogo from './Assets/whitebrandMM.png';
+import whiteChainImage from '../src/Assets/whitechain.png'
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -32,10 +35,19 @@ function App() {
 
   return (
     <div>
+      <nav>
+        <div className="logo-container">
+          <img src={blacklogo} alt="My Movie App" className="logo" /> 
+        </div>
+        <div className="image-container">
+        <img src={whiteChainImage} alt="White Chain" className="white-chain-image" />
+      </div>
+      </nav>
       <Routes>
         <Route path="/" element={<MovieContainer movies={movies} />} />
         <Route path="/movies/:id" element={<SingleMovie />} />
       </Routes>
+      <img src={brandLogo} alt="Brand Logo" className="brand-logo" />
     </div>
     );
 }
