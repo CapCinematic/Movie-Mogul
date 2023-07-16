@@ -1,71 +1,59 @@
-# Getting Started with Create React App
+## Movie Mogul
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Movie Mogul is a cutting-edge application that offers users a unique and sophisticated platform to discover information about movies. Our app sets itself apart from other movie websites by providing a sleek, modern interface that allows users to easily access and explore a carefully curated list of films.
 
-## Available Scripts
+Our homepage provides a user-friendly interface that enables users to browse through the list of movies and select the one that interests them the most. Once selected, the app provides an extensive amount of information about the movie that is sure to satisfy any movie buff's curiosity.
 
-In the project directory, you can run:
+Not only does our app offer an attractive and modern design, but it also delivers an exceptional user experience. Our single movie page provides in-depth information about the selected film and is easily navigable, allowing users to move seamlessly back to the homepage by simply clicking our logo.
 
-### `npm start`
+We invite you to explore the app and enjoy the aesthetically pleasing design and comprehensive data we have provided.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Steps to install the project and how to get the development environment running:
 
-### `npm test`
+```
+1. git clone 
+2. cd projectname/
+3. npm install
+4. npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<image src=https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmVjaGdmMHczb3RyZG5namVvaGw5anpveDNhN2wwOWJrejdqNHg3ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DMHVQ6SvVbH5lYL4Yq/giphy.gif>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://github.com/CapCinematic
+https://github.com/jmartin777
+https://www.linkedin.com/in/isaiah-cap-richardson/
+https://www.linkedin.com/in/joshua-martin-b57736259/
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Code Snippets
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The code snippets include the following:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `App.js`: This file contains the main component of the application. It fetches movie data from an API and renders a list of movies and a single movie view.
+- `MovieContainer.js`: This file contains a component that renders a list of movies.
+- `SingleMovie.js`: This file contains a component that renders the details of a single movie.
+- `APIcalls.js`: This file contains a function that fetches movie data from the API.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Test Cases
 
-## Learn More
+The test cases include the following:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- "displays a list of movies on page load"
+- "displays a single movie on click"
+- "returns to movie container display on click of our Brand Logo"
+- "displays an error message if the movies fail to load"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### User Stories
 
-### Code Splitting
+The user stories for this application include the following:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Movie-Mogul
+- "As a user, when I visit the app, all movies should be displayed"
+- "As a user, I can click a movie, and see that movie’s details"
+- "As a user with a wide range of devices, I want the layout and content to adapt seamlessly to different screen sizes and orientations, so I can have a consistent and user-friendly experience across all devices."

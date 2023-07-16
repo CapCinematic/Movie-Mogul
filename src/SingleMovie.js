@@ -41,12 +41,12 @@ function SingleMovie() {
     <div className="single-movie">
     {showLogo && (
       <div className="logo-container">
-        <img src={blacklogo} alt="Logo" />
+        <img src={blacklogo} alt="Logo" className="brand-logo" />
       </div>
     )}
     <div className="single-movie">
       <div className="poster-container">
-        <img src={movie.poster_path} alt={movie.title} />
+        <img src={movie.poster_path} alt={movie.title}/>
       </div>
       <div className="info-container">
         <h2>{movie.title}</h2>
